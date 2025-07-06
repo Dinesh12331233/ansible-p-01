@@ -1,0 +1,19 @@
+- name: ansible datatypes 
+  hosts: local 
+  connection: local 
+  vars: 
+    DURATION: 120 # NUMBER
+    COURSE: Devops With AWS # string 
+    TOOLS: 
+    - linux 
+    - shell 
+    - ansible 
+    concepts:
+      CI: jenkins 
+      SCRIPTING: shell,ansible,terraform,jenkins 
+  tasks: 
+  - name: printing datatypes 
+    ansible.builtin.debug: 
+      msg: "Hello duration is {{ DURATION }}, course is {{ COURSE }}, tools are {{ TOOLS }}, concepts are {{ CONCEPTS }}" 
+      
+
