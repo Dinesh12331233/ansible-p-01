@@ -39,4 +39,10 @@
     vars: 
       name: deepthi durgam 
     ansible.builtin.debug: 
-      msg: "{{ name | upper }}"                    
+      msg: "{{ name | upper }}" 
+
+  - name: convert into lower case 
+    vars: 
+      name: DURGAM DEEPTHI 
+    ansible.builtin.debug: 
+      msg: "{{ name | lower }}"                           
