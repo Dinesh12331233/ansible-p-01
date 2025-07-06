@@ -1,0 +1,8 @@
+- name: installing nginx 
+  hosts: frontend 
+  become: yes 
+  tasks: 
+  - name: installing nginx in target server or remote server or remote machine 
+    ansible.builtin.package: 
+      name: nginx 
+      state: present
