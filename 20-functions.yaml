@@ -1,7 +1,13 @@
 - name: functions demo 
   hosts: local 
   connection: local 
+  vars: 
+    fruits: apple,banana,orange,mango
   tasks: 
   - name: checking undefined variable 
     ansible.builtin.debug: 
       msg: "Hello, {{ person | default('dinesh') }}" 
+
+  - name: transforming string into list 
+    ansible.builtin.debug: 
+      msg: "fruits are {{ fruits | split(',') }}"
