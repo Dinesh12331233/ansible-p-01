@@ -2,9 +2,9 @@
   hosts: local 
   connection: local 
   vars: 
-    COURSE: Ansible course 
-    DURATION: 10Hr 
-    TRAINER: Sivakumar mettukuru
+    COURSE: "Ansible course" 
+    DURATION: "10Hr" 
+    TRAINER: "Sivakumar mettukuru"
   tasks: 
   - name: print course information
     ansible.builtin.debug: 
