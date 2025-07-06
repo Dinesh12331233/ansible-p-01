@@ -2,7 +2,8 @@
   hosts: local 
   connection: local 
   vars: 
-    fruits: apple,banana,orange,mango
+    fruits: apple,banana,orange,mango 
+    persons: ramesh,suresh,dinesh,deepthi 
   tasks: 
   - name: checking undefined variable 
     ansible.builtin.debug: 
@@ -10,4 +11,8 @@
 
   - name: transforming string into list 
     ansible.builtin.debug: 
-      msg: "fruits are {{ fruits | split(',') }}"
+      msg: "fruits are {{ fruits | split(',') }}" 
+
+  - name: transforming string into list 
+    ansible.builtin.debug: 
+      msg: "persons are {{ persons | split(',') }}"    
