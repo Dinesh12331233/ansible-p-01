@@ -9,3 +9,11 @@
   - name: print course information
     ansible.builtin.debug: 
       msg: "Hello course is {{ COURSE }}, duration is {{ DURATION }}, Trainer is {{ TRAINER }}" 
+  
+  - name: print course information in statements 
+    ansible.builtin.debug: 
+      msg: 
+      - "course information: "
+      - "Course is {{ COURSE }}"
+      - "duration is {{ DURATION }}" 
+      - "trainer is {{ TRAINER }}"
