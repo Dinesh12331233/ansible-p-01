@@ -45,4 +45,9 @@
     vars: 
       name: DURGAM DEEPTHI 
     ansible.builtin.debug: 
-      msg: "{{ name | lower }}"                           
+      msg: "{{ name | lower }}" 
+
+  - name: checking IP address is valid or not 
+    IP: 168.0.0.0 
+    ansible.builtin.debug: 
+      msg: "{{ IP | ansible.utils.ipaddr }}"                               
