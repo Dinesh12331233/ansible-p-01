@@ -3,4 +3,19 @@
   tasks: 
   - name: print hello world 
     ansible.builtin.debug:
-      msg: "Hello world" 
+      msg: "Hello world from frontend" 
+
+- name: print some information 
+  hosts: local 
+  connection: local 
+  tasks: 
+  - name: printing statement
+    ansible.builtin.debug: 
+      msg: "Hello world from local host" 
+  
+  - name: printing statements 
+    ansible.builtin.debug: 
+      msg: 
+      - "Hello Deepthi.I love you so much"
+      - "Hello chinni."
+
