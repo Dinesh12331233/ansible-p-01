@@ -1,6 +1,8 @@
 - name: using when condition
   hosts: local 
   connection: local 
+  vars: 
+    NUMBER: 120
   tasks: 
   - name: print a number if it is lessthan or equal to 100 
     ansible.builtin.debug: 
