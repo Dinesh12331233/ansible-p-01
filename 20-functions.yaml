@@ -15,4 +15,13 @@
 
   - name: transforming string into list 
     ansible.builtin.debug: 
-      msg: "persons are {{ persons | split(',') }}"    
+      msg: "persons are {{ persons | split(',') }}"   
+
+  - name: convert map into list 
+    vars: 
+      course: 
+        name: ansible 
+        duration: 10Hrs
+        trainer: sivakumar 
+    ansible.builtin.debug: 
+      msg: "course info {{ course | dict2items }}"         
