@@ -8,12 +8,12 @@
     - linux 
     - shell 
     - ansible 
-    concepts:
+    CONCEPTS: 
       CI: jenkins 
       SCRIPTING: shell,ansible,terraform,jenkins 
   tasks: 
   - name: printing datatypes 
     ansible.builtin.debug: 
       msg: "Hello duration is {{ DURATION }}, course is {{ COURSE }}, tools are {{ TOOLS }}, concepts are {{ CONCEPTS }}" 
-      
+
 
