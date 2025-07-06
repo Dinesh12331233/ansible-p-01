@@ -3,5 +3,5 @@
   connection: local 
   tasks: 
   - name: checking undefined variable 
-    ansible.builtin.package: 
-      msg: "Hello {{ person | default('Dinesh') }}" 
+    ansible.builtin.debug: 
+      msg: "Hello, {{ person | default('dinesh') }}" 
